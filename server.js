@@ -16,9 +16,7 @@ const allowedOrigins = [
 ];
 
 app.use(cors({
-  origin: process.env.NODE_ENV === 'production' 
-    ? allowedOrigins 
-    : '*', // Allow all origins in development
+  origin: allowedOrigins,
   credentials: true
 }));
 
